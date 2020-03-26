@@ -170,7 +170,7 @@ class LinkedDataSpatialQuery(object):
 			# sparqlParam = {'query':'SELECT ?item ?itemLabel WHERE{ ?item wdt:P31 wd:Q146 . SERVICE wikibase:label { bd:serviceParam wikibase:language "en" }}', 'format':'json'}
 			entityTypeSparqlParam = {'query': entityTypeQuery, 'format': 'json'}
 			# headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-			sparqlRequest = requests.get('https://query.wikidata.org/bigdata/namespace/wdq/sparql', params=entityTypeSparqlParam)
+			sparqlRequest = requests.get('https://query.wikidata.org/sparql', params=entityTypeSparqlParam)
 			print(sparqlRequest.url)
 			# messages.addMessage("URL: {0}.".format(sparqlRequest.url))
 			entityTypeJson = sparqlRequest.json()["results"]["bindings"]
@@ -365,7 +365,7 @@ class LinkedDataSpatialQuery(object):
 
 			sparqlParam = {'query': query, 'format': 'json'}
 			
-			sparqlRequest = requests.get('https://query.wikidata.org/bigdata/namespace/wdq/sparql', params=sparqlParam)
+			sparqlRequest = requests.get('https://query.wikidata.org/sparql', params=sparqlParam)
 
 			print(sparqlRequest.url)
 			messages.addMessage("SPARQL: {0}".format(sparqlRequest.url))
@@ -3107,7 +3107,7 @@ class SPARQLQuery(object):
 
 			
 			endPlaceSparqlParam = {'query': endPlaceQuery, 'format': 'json'}
-			endPlaceSparqlRequest = requests.get('https://query.wikidata.org/bigdata/namespace/wdq/sparql', params=endPlaceSparqlParam)
+			endPlaceSparqlRequest = requests.get('https://query.wikidata.org/sparql', params=endPlaceSparqlParam)
 			arcpy.AddMessage("SPARQL: {0}".format(endPlaceSparqlRequest.url))
 			jsonBindingObject.extend(endPlaceSparqlRequest.json()["results"]["bindings"])
 
@@ -3146,7 +3146,7 @@ class SPARQLQuery(object):
 
 		
 		locationLinkageSparqlParam = {'query': locationLinkageQuery, 'format': 'json'}
-		locationLinkageSparqlRequest = requests.get('https://query.wikidata.org/bigdata/namespace/wdq/sparql', params=locationLinkageSparqlParam)
+		locationLinkageSparqlRequest = requests.get('https://query.wikidata.org/sparql', params=locationLinkageSparqlParam)
 		arcpy.AddMessage("SPARQL: {0}".format(locationLinkageSparqlRequest.url))
 		return locationLinkageSparqlRequest.json()
 
@@ -3179,7 +3179,7 @@ class SPARQLQuery(object):
 
 		
 		commonPropertySparqlParam = {'query': commonPropertyQuery, 'format': 'json'}
-		commonPropertySparqlRequest = requests.get('https://query.wikidata.org/bigdata/namespace/wdq/sparql', params=commonPropertySparqlParam)
+		commonPropertySparqlRequest = requests.get('https://query.wikidata.org/sparql', params=commonPropertySparqlParam)
 		# print(commonPropertySparqlRequest.url)
 		arcpy.AddMessage("SPARQL: {0}".format(commonPropertySparqlRequest.url))
 		# commonPropertyJSON = commonPropertySparqlRequest.json()["results"]["bindings"]
@@ -3345,7 +3345,7 @@ class SPARQLQuery(object):
 
 			
 			commonPropertyLabelSparqlParam = {'query': commonPropertyLabelQuery, 'format': 'json'}
-			commonPropertyLabelSparqlRequest = requests.get('https://query.wikidata.org/bigdata/namespace/wdq/sparql', params=commonPropertyLabelSparqlParam)
+			commonPropertyLabelSparqlRequest = requests.get('https://query.wikidata.org/sparql', params=commonPropertyLabelSparqlParam)
 			# print(commonPropertySparqlRequest.url)
 			arcpy.AddMessage("SPARQL: {0}".format(commonPropertyLabelSparqlRequest.url))
 			# commonPropertyJSON = commonPropertySparqlRequest.json()["results"]["bindings"]
@@ -3828,7 +3828,7 @@ class SPARQLQuery(object):
 
 			
 			relFinderPropertySparqlParam = {'query': relFinderPropertyQuery, 'format': 'json'}
-			relFinderPropertySparqlRequest = requests.get('https://query.wikidata.org/bigdata/namespace/wdq/sparql', params=relFinderPropertySparqlParam)
+			relFinderPropertySparqlRequest = requests.get('https://query.wikidata.org/sparql', params=relFinderPropertySparqlParam)
 			arcpy.AddMessage("SPARQL: {0}".format(relFinderPropertySparqlRequest.url))
 			jsonBindingObject.extend(relFinderPropertySparqlRequest.json()["results"]["bindings"])
 
@@ -3980,7 +3980,7 @@ class SPARQLQuery(object):
 
 			
 			relFinderPropertySparqlParam = {'query': relFinderPropertyQuery, 'format': 'json'}
-			relFinderPropertySparqlRequest = requests.get('https://query.wikidata.org/bigdata/namespace/wdq/sparql', params=relFinderPropertySparqlParam)
+			relFinderPropertySparqlRequest = requests.get('https://query.wikidata.org/sparql', params=relFinderPropertySparqlParam)
 			arcpy.AddMessage("SPARQL: {0}".format(relFinderPropertySparqlRequest.url))
 			jsonBindingObject.extend(relFinderPropertySparqlRequest.json()["results"]["bindings"])
 
