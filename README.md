@@ -6,6 +6,11 @@ Code for ESRI Linked Data Connector Tools described in [our Transactions in GIS 
   <img src="flowchart.png" alt="intro" width="1000" />
 </p>
 
+### Related Link
+1. [Transactions in GIS Paper](https://onlinelibrary.wiley.com/doi/abs/10.1111/tgis.12538)
+2. [Projection Demo](https://www.youtube.com/watch?v=kluiPMaNHfM)
+3. [Esri UC 2020 Presentation Slides](http://www.geog.ucsb.edu/~gengchen_mai/presentations/2019-EsriUC2019.pdf)
+
 ### Dependencies
 - ArcGIS Desktop 10.4
 - Python 2.7
